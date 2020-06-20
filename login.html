@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>大事件-登录/注册</title>
-    <!-- 连接自定义样式 -->
-    <link rel="stylesheet" href="./assets/css/login.css">
     <!-- 连接layui 库 -->
     <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
     <!-- 连接jQuery -->
     <script src="./assets/lib/jquery.js"></script>
+    <!-- 连接自定义样式 -->
+    <link rel="stylesheet" href="./assets/css/login.css">
 </head>
 
 <body>
@@ -28,11 +28,13 @@
             <form action="" class="layui-form">
                 <!-- 2.2.1 输入用户名框 -->
                 <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
                     <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
                         autocomplete="off" class="layui-input">
                 </div>
                 <!-- 2.2.2 输入用户密码框 -->
                 <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
                     <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
                         autocomplete="off" class="layui-input">
                 </div>
@@ -53,16 +55,19 @@
             <form action="" class="layui-form">
                 <!-- 2.3.1 输入用户名框 -->
                 <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
                     <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
                         autocomplete="off" class="layui-input">
                 </div>
                 <!-- 2.3.2 输入用户密码框 -->
                 <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
                     <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
                         autocomplete="off" class="layui-input">
                 </div>
                 <!-- 2.3.2 输入用户密码框 -->
                 <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
                     <input type="password" name="password" required lay-verify="required" placeholder="请再次输入密码"
                         autocomplete="off" class="layui-input">
                 </div>
@@ -75,6 +80,7 @@
                 <div class="layui-form-item links">
                     <a href="javascript:;" id="login-link">登录</a>
                 </div>
+            </form>>
         </div>
     </div>
 </body>
