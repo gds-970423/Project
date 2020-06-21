@@ -13,6 +13,8 @@ $(function () {
     });
     //从layui 里面获取到 layui -form
     var form = layui.form;
+    //从layui 里面获取到 layui -layer
+    var layer = layui.layer;
     form.verify({
         pwd: [
             /^[\S]{6,12}$/
@@ -29,16 +31,43 @@ $(function () {
     //监听 表单注册事件
     $('#form_reg').on('submit', function (e) {
         //阻止表单的默认跳转行为
-        e.prevenDefault();
-        console.log('333');
-        //发送ajax请求
-        $.post('http://ajax.frontend.itheima.net/api/reguser', {
+        e.preventDefault();
+        //获取注册信息
+        var data = {
             username: $('#form_reg [name=username]').val(),
-            password: $('#form_reg [name=password]').val()
-        }, function (res) {
+            password: $('#form_reg [name=password]').val(),
+        };
+        //发送ajax请求
+        $.post('http://ajax.frontend.itheima.net/api/reguser', data, function (res) {
             console.log(res);
-            if (res.status !== 0) return alert(res.message);
-            console.log(res.message);
+            if (res.status !== 0) {
+                return layer.msg(res.message);
+            };
+            layer.msg('注册成功，请登录!');
+            //注册成功之后切换页面
+            $('#login-link').click();
+        });
+    });
+    //监听 表单登录事件
+    $('#form-login').on('submit', function (e) {
+        //阻止表单的默认跳转行为
+        e.preventDefault();
+        $.ajax({
+            url: 'http://ajax.frontend.itheima.net/api/login',
+            method: 'post',
+            // 快速获取表单数值
+            data: $(this).serialize(),
+            success: function (res) {
+                //失败判断
+                if (res.status !== 0) {
+                    return layer.msg(res.message);
+                };
+                layer.msg(res.message);
+                //讲登录成功得到的token字符串，保存到localStorage中
+                localStorage.setItem('token', res.token);
+                //保存之后再跳转到后台 主页
+                location.href = 'index.html';
+            }
         });
     });
 });
