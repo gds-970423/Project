@@ -38,7 +38,7 @@ $(function () {
             password: $('#form_reg [name=password]').val(),
         };
         //发送ajax请求
-        $.post('http://ajax.frontend.itheima.net/api/reguser', data, function (res) {
+        $.post('/api/reguser', data, function (res) {
             console.log(res);
             if (res.status !== 0) {
                 return layer.msg(res.message);
@@ -53,7 +53,7 @@ $(function () {
         //阻止表单的默认跳转行为
         e.preventDefault();
         $.ajax({
-            url: 'http://ajax.frontend.itheima.net/api/login',
+            url: '/api/login',
             method: 'post',
             // 快速获取表单数值
             data: $(this).serialize(),
