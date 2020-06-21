@@ -1,0 +1,42 @@
+.layui-footer{
+    text-align: center;
+    font-size: 12px;
+}
+.layui-body{
+    overflow: hidden;
+}
+.ifrname{
+    width: 100%;
+    height: 100%;
+}
+.iconfont{
+    margin-right: 8px;
+}
+.layui-nav-child dd{
+    margin-left: 20px;
+}
+.layui-nav-img{
+    width: 40px;
+    height: 40px;
+}
+.userinfo {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 12px;
+    user-select: none;
+  }
+.iconVia{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    background-color: #009688;
+    border-radius: 50%;
+    position: relative;
+    top: 4px;
+    margin-right: 10px;
+}
