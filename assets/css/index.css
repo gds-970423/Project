@@ -25,6 +25,7 @@
     text-align: center;
     font-size: 12px;
     user-select: none;
+    border-bottom: 1px solid #282b33;
   }
 .iconVia{
     display: inline-block;

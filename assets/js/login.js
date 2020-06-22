@@ -1,4 +1,6 @@
 $(function () {
+    //在登录之前先清除一下 遗留的token
+    removetoken();
     //切换注册点击事件
     $('#reg-link').on('click', function () {
         // 点击注册 隐藏登录盒子 显示登录字体
@@ -70,4 +72,7 @@ $(function () {
             }
         });
     });
+    function removetoken() {
+        localStorage.removeItem('token');
+    }
 });
