@@ -32,8 +32,9 @@ $(function () {
                     return layer.msg('修改密码失败！');
                 }
                 layer.msg('修改密码成功！');
-                //修改成功之后 就调用清空
-                emptypassword();
+                //修改成功之后 自动调回login页面 并且清除token值
+                // emptypassword();
+
             }
         });
     });

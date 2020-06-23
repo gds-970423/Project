@@ -12,9 +12,7 @@
 .iconfont{
     margin-right: 8px;
 }
-.layui-nav-child dd{
-    margin-left: 20px;
-}
+
 .layui-nav-img{
     width: 40px;
     height: 40px;
@@ -40,4 +38,8 @@
     position: relative;
     top: 4px;
     margin-right: 10px;
+}
+.distance{
+    margin-right: 8px;
+  margin-left: 20px;
 }

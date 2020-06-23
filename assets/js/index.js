@@ -23,12 +23,10 @@ function getuserinfo() {
         url: '/my/userinfo',
         method: 'GET',
         success: function (res) {
-            console.log(res);
             // 失败判断
             if (res.status !== 0) {
                 return layui.layer.msg('获取用户信息失败！')
             }
-            console.log(res.message);
             // 获取成功渲染 用户的头像
             renderAvatar(res.data);
         }
